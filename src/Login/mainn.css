@@ -1,0 +1,122 @@
+:root {
+  --primary-color: #7A4F3E;
+  --accent-color: #FFA726;
+  --secondary-color: #88024F;
+  --background-color: #F5F5BC;
+  --text-color: #333333;
+}
+
+/* Page layout */
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+/* Card */
+.auth-card {
+  background-color: #fff;
+  width: 380px;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.auth-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Headings */
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Input fields */
+.auth-card input,
+.auth-card select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.auth-card input:focus,
+.auth-card select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 6px rgba(255, 167, 38, 0.4);
+}
+
+/* Buttons */
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-card button:hover {
+  background-color: var(--accent-color);
+}
+
+/* Error message */
+.auth-error {
+  color: var(--secondary-color);
+  background-color: rgba(255, 0, 0, 0.05);
+  border-left: 3px solid var(--secondary-color);
+  padding: 8px 10px;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Links */
+.auth-card a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-card a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* Labels */
+.auth-card label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.3rem;
+  text-align: left;
+}
+
+/* Text below form */
+.auth-footer-text {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .auth-card {
+    width: 90%;
+    padding: 2rem 1.5rem;
+  }
+}

@@ -1,0 +1,111 @@
+:root {
+  --primary-color: #7a4f3e;
+  --accent-color: #ffa726;
+}
+
+/* Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+/* Modal box */
+.modal-card {
+  position: relative;
+  background: #fff;
+  width: 400px;
+  padding: 2.4rem;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+/* Close button */
+.close-btn {
+  position: relative;
+  top: 10px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  color: var(--accent-color);
+  transform: rotate(90deg) scale(1.2);
+}
+
+/* Inputs */
+.modal-card input,
+.modal-card select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.modal-card button {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-card button:hover {
+  background: var(--accent-color);
+  transform: scale(1.05);
+}
+
+.error-box {
+  color: #b71c1c;
+  background: rgba(255, 0, 0, 0.05);
+  border-left: 3px solid #b71c1c;
+  padding: 8px 10px;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+.form-group {
+  position: relative;
+  text-align: left;
+}
+
+.form-group input {
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+.form-group.valid input {
+  border-color: #4caf50; /* green */
+}
+
+.form-group.invalid input {
+  border-color: #e53935; /* red */
+}
+
+.form-group small {
+  display: block;
+  color: #e53935;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  margin-left: 2px;
+}
+
+.form-group.valid small {
+  color: #4caf50;
+}

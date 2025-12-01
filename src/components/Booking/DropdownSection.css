@@ -1,0 +1,56 @@
+.dropdown-section {
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .dropdown-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-header:hover {
+    background-color: #f9fafb;
+  }
+  
+  .arrow {
+    font-size: 1.2rem;
+    color: #4b5563;
+  }
+  
+  .dropdown-content {
+    padding: 1rem 1.5rem 1rem 2rem; /* stronger left indentation for content */
+    font-size: 0.95rem;
+    color: #374151;
+    border-top: 1px solid #e5e7eb;
+    background-color: #fff;
+  }
+  
+  .faq-item {
+    margin-bottom: 1rem;
+    margin-left: 0.5rem; /* extra left offset for each FAQ row */
+  }
+  
+  .faq-question {
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.3rem;
+  }
+  
+  .faq-answer {
+    color: #4b5563;
+    margin-left: 0.5rem; /* Slight indentation for answer */
+  }

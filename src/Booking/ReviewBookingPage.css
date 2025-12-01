@@ -1,0 +1,217 @@
+.review-card {
+  background-color: var(--simba-white);
+  padding: 1.5rem;
+  border-radius: var(--simba-radius-soft);
+  border-radius: 16px;
+  box-shadow: var(--simba-shadow-soft);
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--simba-light-grey);
+  transition: box-shadow var(--transition-fast);
+  justify-content: center;
+}
+
+.review-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.review-card .detail-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------------------------------------- */
+/* 3. BOOKING SUMMARY HEADER (Event Info) */
+/* ------------------------------------------- */
+
+/* Targetting the BookingSummaryHeader component's main flex div */
+.booking-summary-header { 
+  padding: 1rem;
+  border-bottom: 2px solid var(--simba-light-grey);
+  margin-bottom: 1.5rem;
+  background-color: var(--simba-white);
+  border-radius: var(--simba-radius-soft);
+  border-radius: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.booking-summary-header h2 {
+  color: var(--simba-brown-dark);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.booking-summary-header p {
+  color: var(--simba-brown-dark);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.booking-summary-header p svg {
+  color: var(--simba-orange-dark);
+}
+
+/* ------------------------------------------- */
+/* 4. PAYMENT SUMMARY CARD */
+/* ------------------------------------------- */
+
+.payment-summary-card {
+  /* Use the general review-card styling */
+  /* Targetting the inline style on h3 */
+  border-bottom: 1px solid var(--simba-light-grey); 
+}
+
+.payment-summary-card h3 {
+  color: var(--simba-orange-dark);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--simba-light-grey);
+  border-radius: 5px;
+}
+
+/* Payment Detail Item (.detail-item for total due) */
+.payment-summary-card .detail-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  /* Use dashed line for clarity */
+  border-top: 2px dashed var(--simba-light-grey); 
+  padding-top: 1rem;
+}
+
+.payment-summary-card .detail-item span:first-child {
+  color: var(--simba-brown-dark);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.payment-summary-card .detail-item span:last-child {
+  color: var(--simba-orange-dark);
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+/* ------------------------------------------- */
+/* 5. CONFIRM PAYMENT BUTTON (.book-button) */
+/* ------------------------------------------- */
+
+.book-button {
+  width: 100%;
+  padding: 1.2rem;
+  margin-top: 1.5rem !important; /* Override inline margin */
+  
+  /* Premium Gradient and Shadow */
+  background: linear-gradient(135deg, var(--simba-orange-dark) 0%, #ff8c1a 100%);
+  color: var(--simba-white);
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(204, 102, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.book-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(204, 102, 0, 0.4);
+  background: linear-gradient(135deg, #ff8c1a 0%, var(--simba-orange-dark) 100%);
+}
+
+.book-button:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 10px rgba(204, 102, 0, 0.3);
+}
+
+/* ------------------------------------------- */
+/* 6. RESPONSIVE / MISC */
+/* ------------------------------------------- */
+
+@media (max-width: 400px) {
+  .page-content {
+      padding: 1rem 0.5rem;
+  }
+  .page-content h1 {
+      font-size: 1.4rem;
+  }
+}
+
+.seat-counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--simba-light-grey);
+  padding-top: 1rem;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.seat-label {
+  font-weight: 600;
+  color: var(--simba-text-dark);
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.seat-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  justify-content: center; /* center the +/- and count horizontally */
+}
+
+.seat-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.minus-btn {
+  background-color: var(--simba-orange-light);
+}
+
+.plus-btn {
+  background-color: var(--simba-orange-dark);
+}
+
+.seat-btn:hover:not(:disabled) {
+  transform: scale(1.1);
+}
+
+.seat-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.seat-count {
+  font-weight: 700;
+  font-size: 1.2rem;
+  min-width: 30px;
+  text-align: center;
+}
+
+.seat-max {
+  color: var(--simba-text-medium);
+  font-size: 0.85rem;
+}

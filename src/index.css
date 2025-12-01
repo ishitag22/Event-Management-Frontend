@@ -1,0 +1,345 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.react-select__control {
+  padding: 6px 8px !important;
+  font-size: 1em !important;
+  font-family: var(--font-primary) !important;
+  border: 1px solid var(--simba-light-grey) !important;
+  border-radius: var(--radius-soft) !important;
+  background-color: var(--simba-off-white) !important;
+  box-shadow: none !important; 
+  transition: all 0.2s ease !important;
+}
+
+
+.react-select__control--is-focused {
+  border-color: var(--simba-orange-light) !important;
+  box-shadow: 0 0 0 3px rgba(224, 145, 74, 0.2) !important;
+  outline: none !important;
+}
+
+
+.react-select__placeholder {
+  color: #6c757d !important;  
+}
+
+
+.react-select__menu {
+  font-family: var(--font-primary) !important;
+  border-radius: var(--radius-soft) !important;
+}
+
+[data-theme='dark'] .react-select__menu {
+  background-color: #6c757d;
+  border-color: var(--simba-text-dark) !important;
+  color: var(--simba-off-white) !important;
+}
+
+
+.login-landing,
+.authBackground {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url('./Login/blur-background-energetic-crowd-enjoying-600nw-2588558777.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; 
+}
+
+
+.login-landing .container,
+.authBackground .container,
+.login-landing .auth-card,
+.authBackground .auth-card {
+  
+  background: rgba(255, 255, 255, 0.678);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.06);
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  .login-landing,
+  .authBackground {
+    background-attachment: scroll;
+  }
+}
+
+
+.authBackground {
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Welcome box */
+.authBackground .welcome-box {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  color: rgba(255,255,255,0.95);           
+  text-shadow: 0 6px 18px rgba(0,0,0,0.65); 
+  pointer-events: none;                    
+}
+
+.authBackground .welcome-box h1 {
+  margin: 0 0 6px 0;
+  font-size: 2.6rem;
+  line-height: 1.05;
+  color: inherit;
+}
+
+.authBackground .welcome-box h1 span {
+  color: #ffd79b;                          
+  text-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+.authBackground .welcome-box p {
+  margin: 0;
+  color: rgba(255,255,255,0.88);
+  max-width: 920px;
+  font-size: 1rem;
+}
+
+.authBackground .container {
+  margin-top: 8px;
+}
+
+
+html[data-theme='dark'] .authBackground {
+  background-image:
+    linear-gradient(rgba(99, 99, 99, 0.352), rgba(6,6,6,0.64)),
+    url('./Login/blur-background-energetic-crowd-enjoying-600nw-2588558777.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+html[data-theme='dark'] .authBackground .welcome-box {
+  color: #ffffff;
+  text-shadow: 0 8px 28px rgba(0,0,0,0.75);
+}
+
+
+html[data-theme='dark'] .auth-card,
+html[data-theme='dark'] .container.auth-card {
+  background: rgba(18, 18, 18, 0.692); 
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.65);
+  color: var(--simba-off-white);
+}
+
+
+/* Make typed input and react-select text lighter in dark mode */
+html[data-theme='dark'] .auth-card input,
+html[data-theme='dark'] .auth-card textarea,
+html[data-theme='dark'] .auth-card select,
+html[data-theme='dark'] .auth-card .inputField, /* CSS module inputs */
+html[data-theme='dark'] .auth-card .react-select__single-value,
+html[data-theme='dark'] .auth-card .react-select__input,
+html[data-theme='dark'] .auth-card .react-select__value-container,
+html[data-theme='dark'] .auth-card .react-select__control,
+html[data-theme='dark'] .auth-card .react-select__control .react-select__value-container input {
+  color: rgba(255,255,255,0.92) !important; /* lighter typed text */
+}
+
+/* Lighter placeholder color */
+html[data-theme='dark'] .auth-card input::placeholder,
+html[data-theme='dark'] .auth-card textarea::placeholder,
+html[data-theme='dark'] .auth-card .react-select__placeholder {
+  color: rgba(255,255,255,0.65) !important;
+}
+
+/* Dropdown/menu items */
+html[data-theme='dark'] .auth-card .react-select__menu,
+html[data-theme='dark'] .auth-card .react-select__menu-list,
+html[data-theme='dark'] .auth-card .react-select__option {
+  background: rgba(18, 18, 18, 0.167);
+  color: rgba(255,255,255,0.92) !important;
+}
+
+/* Focused / selected option contrast */
+html[data-theme='dark'] .auth-card .react-select__option--is-focused,
+html[data-theme='dark'] .auth-card .react-select__option--is-selected {
+  background: rgba(255, 255, 255, 0.342);
+  color: rgba(255,255,255,0.96) !important;
+}
+
+html[data-theme='dark'] .auth-card input,
+html[data-theme='dark'] .auth-card textarea,
+html[data-theme='dark'] .auth-card select,
+html[data-theme='dark'] .auth-card .react-select__control {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  color: var(--simba-off-white);
+  caret-color: var(--simba-orange-light);
+}
+
+
+html[data-theme='dark'] .auth-card input::placeholder,
+html[data-theme='dark'] .auth-card textarea::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+
+html[data-theme='dark'] .auth-card .primaryButton {
+  background: var(--simba-orange-light);
+  color: #111;
+  border: none;
+  box-shadow: 0 6px 18px rgba(193,112,64,0.18);
+}
+
+html[data-theme='dark'] .auth-card .primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(193,112,64,0.22);
+}
+
+
+html[data-theme='dark'] .auth-card a,
+html[data-theme='dark'] .auth-card p a,
+html[data-theme='dark'] .auth-card .link {
+  color: var(--simba-orange-light, #ffd79b) !important;
+  text-decoration: none;
+}
+
+
+html[data-theme='dark'] .auth-card p,
+html[data-theme='dark'] .auth-card small,
+html[data-theme='dark'] .auth-card .react-select__placeholder {
+  color: rgba(255,255,255,0.92) !important;
+}
+
+
+html[data-theme='dark'] .auth-card a[style],
+html[data-theme='dark'] .auth-card a[style] * {
+  color: var(--simba-orange-light, #ffd79b) !important;
+}
+
+
+html[data-theme='dark'] .auth-card .react-select__menu {
+  background: rgba(24,24,24,0.95);
+  color: var(--simba-off-white);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+
+html[data-theme='dark'] .auth-card .react-select__control,
+html[data-theme='dark'] .auth-card .react-select__control--menu-is-open {
+  background: rgba(114, 114, 114, 0.854);
+  border: 1px solid rgba(255,255,255,0.06);
+  color: var(--simba-light-grey);
+  box-shadow: none;
+}
+
+
+html[data-theme='dark'] .auth-card .react-select__control--is-focused {
+  box-shadow: 0 8px 22px rgba(193,112,64,0.12);
+  border-color: rgba(193,112,64,0.35);
+}
+
+/* Placeholder / single value color */
+html[data-theme='dark'] .auth-card .react-select__placeholder,
+html[data-theme='dark'] .auth-card .react-select__single-value {
+  color: rgba(255,255,255,0.9);
+}
+
+/* Menu (dropdown) appearance — also target global menu if not rendered inside card) */
+html[data-theme='dark'] .auth-card .react-select__menu,
+html[data-theme='dark'] .react-select__menu {
+  background: rgba(18,18,18,0.96);
+  color: var(--simba-off-white);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+  z-index: 9999;
+}
+
+/* Menu list padding */
+html[data-theme='dark'] .auth-card .react-select__menu-list,
+html[data-theme='dark'] .react-select__menu-list {
+  padding: 6px 4px;
+}
+
+/* Options */
+html[data-theme='dark'] .auth-card .react-select__option,
+html[data-theme='dark'] .react-select__option {
+  background: transparent;
+  color: var(--simba-off-white);
+  padding: 8px 12px;
+}
+
+/* Hover / focused option */
+html[data-theme='dark'] .auth-card .react-select__option--is-focused,
+html[data-theme='dark'] .react-select__option--is-focused {
+  background: rgba(255,255,255,0.04);
+  color: var(--simba-off-white);
+}
+
+/* Selected option */
+html[data-theme='dark'] .auth-card .react-select__option--is-selected,
+html[data-theme='dark'] .react-select__option--is-selected {
+  background: rgba(193,112,64,0.18);
+  color: #111;
+}
+
+/* Indicator / dropdown arrow color */
+html[data-theme='dark'] .auth-card .react-select__indicator,
+html[data-theme='dark'] .react-select__indicator {
+  color: rgba(255,255,255,0.86);
+}
+
+/* Ensure any portal-mounted menus get proper color when dark */
+html[data-theme='dark'] .react-select__menu--portal {
+  background: rgba(18,18,18,0.96);
+  color: var(--simba-off-white);
+}
+
+/* Optional: smooth transitions */
+.react-select__control,
+.react-select__menu,
+.react-select__option {
+  transition: background-color 180ms ease, color 160ms ease, box-shadow 200ms ease;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .react-select__control,
+  .react-select__menu,
+  .react-select__option {
+    transition: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .authBackground .welcome-box h1 { font-size: 1.4rem; }
+  .authBackground .welcome-box p { font-size: 0.95rem; padding: 0 8px; }
+}
+
+

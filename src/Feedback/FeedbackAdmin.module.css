@@ -1,0 +1,477 @@
+.adminContainer {
+    width: 95%;
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 25px;
+    background-color: var(--simba-white);
+    border-radius: var(--radius-soft);
+    box-shadow: var(--shadow-medium);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: var(--simba-bg-gradient);
+    border: 1px solid var(--simba-white);
+}
+
+.adminContainer h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Back Button --- */
+
+.backButton {
+    align-self: flex-start;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    border: 1px solid var(--simba-light-grey);
+    border-radius: var(--radius-round);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    background-color: var(--simba-off-white);
+    color: var(--simba-text-medium);
+}
+.backButton:hover {
+    background-color: var(--simba-orange-light);
+    color: var(--simba-white);
+}
+
+/* --- Top Events --- */
+.statsContainer {
+    background-color: var(--simba-off-white);
+    border: 1px solid var(--simba-light-grey);
+    border-radius: var(--radius-soft);
+    padding: 15px 20px;
+    text-align: left;
+}
+.statsContainer h3 {
+    margin-top: 0;
+    color: var(--simba-orange-dark);
+    font-size: 1.3em;
+}
+.statsContainer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.statsContainer li {
+    padding: 5px 0;
+    border-bottom: 1px dashed var(--simba-light-grey);
+    color: var(--simba-text-medium);
+}
+.statsContainer li:last-child {
+    border-bottom: none;
+}
+
+.topEventsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.topEventCard {
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.topEventCard:hover {
+    transform: translateY(-4px);
+}
+
+.topEventImage {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* --- Filter Form --- */
+.filterForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+.filterForm input,
+.filterForm select {
+    padding: 10px 12px;
+    border: 1px solid var(--simba-light-grey);
+    border-radius: var(--radius-soft);
+    font-size: 0.95em;
+    font-family: var(--font-primary);
+    background-color: var(--simba-off-white);
+    color: var(--simba-text-dark);
+    transition: all 0.2s ease;
+    flex: 1 1 120px; 
+}
+.filterForm input:focus,
+.filterForm select:focus {
+    border-color: var(--simba-orange-light);
+    box-shadow: 0 0 0 3px rgba(224, 145, 74, 0.2);
+    outline: none;
+    background-color: var(--simba-white);
+}
+
+.filterForm button {
+    padding: 10px 18px;
+    border-radius: var(--radius-round);
+    font-weight: 500;
+    font-size: 0.95em;
+    flex-shrink: 0;
+    transition: all 0.2s ease-in-out;
+}
+.filterForm button[type="submit"] {
+    background-color: var(--simba-orange-dark);
+    color: var(--simba-white);
+}
+.filterForm button[type="submit"]:hover {
+    background-color: var(--simba-orange-light);
+    cursor: pointer;
+}
+.filterForm button[type="button"] {
+    background-color: var(--simba-light-grey);
+    color: var(--simba-text-medium);
+}
+.filterForm button[type="button"]:hover {
+    background-color: var(--simba-white);
+    cursor: pointer;
+}
+
+/* --- Feedback Table --- */
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto; 
+    margin-top: 1rem;
+}
+
+
+.feedbackTable {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.feedbackTable th,
+.feedbackTable td {
+    padding: 10px 12px;
+    vertical-align: middle;
+    border-right: 1px solid rgba(0,0,0,0.08);
+}
+.feedbackTable tbody tr {
+    border-bottom: 1px solid var(--simba-light-grey);
+    transition: all 0.2s ease-in-out;
+}
+.feedbackTable thead th {
+    background-color: var(--simba-brown-dark);
+    color: var(--simba-white);
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0,0,0,0.06);
+}
+
+.feedbackTable tbody tr:nth-child(even) {
+    background-color: var(--simba-off-white);
+}
+
+.feedbackTable tbody tr:hover {
+    background-color: var(--simba-hover-light);
+}
+
+.commentCell {
+    min-width: 200px;
+    max-width: 350px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 0.9em;
+    color: var(--simba-text-dark);
+}
+
+.actionsCell {
+    min-width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.actionsCell button {
+    padding: 6px 12px;
+    border-radius: var(--radius-round);
+    font-size: 0.85em;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.actionsCell button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: var(--simba-light-grey);
+    color: var(--simba-text-medium);
+}
+
+/* Reply Button */
+.actionsCell button:not(:disabled) {
+    background-color: var(--simba-orange-light);
+    color: var(--simba-white);
+}
+.actionsCell button:not(:disabled):hover {
+    background-color: var(--simba-orange-dark);
+    cursor: pointer;
+}
+
+/* Archive/Unarchive Buttons */
+.archiveButton {
+    background-color: #DC3545;
+    color: var(--simba-white);
+}
+.archiveButton:hover {
+    background-color: #C82333;
+    cursor: pointer;
+}
+.unarchiveButton {
+    background-color: #28A745;
+    color: var(--simba-white);
+}
+.unarchiveButton:hover {
+    background-color: #218838;
+}
+
+.archivedRow {
+    background-color: #f5f5f5 !important;
+    color: #999;
+    opacity: 0.8;
+}
+.archivedRow .commentCell {
+    text-decoration: line-through;
+}
+.filterContainer {
+    background-color: var(--simba-off-white);
+    border: 1px solid var(--simba-light-grey);
+    border-radius: var(--radius-soft);
+    padding: 15px 20px;
+}
+
+.filterContainer h3 {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    color: var(--simba-brown-dark); 
+    font-size: 1.3em;
+}
+
+.linkButton,.eventlink {
+    background: none;
+    border: none;
+    color: var(--simba-orange-dark); 
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0;
+    font-family: var(--font-primary);
+    transition: all 0.2s ease;
+    
+}
+.eventlink{
+    text-align: left;
+    color: var(--simba-orange-dark);
+}
+
+.eventlink:hover {
+    color: var(--simba-orange-light);
+}
+
+.linkButton:hover {
+    color: var(--simba-orange-light);
+}
+.adminHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 1rem;
+}
+
+.adminHeader h2 {
+    margin-bottom: 0; 
+}
+
+@media (min-width: 800px) {
+  .container {
+    max-width: 1000px; 
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 25px;
+  }
+}
+
+/*  entrance animation */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.995);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.adminContainer {
+  will-change: opacity, transform;
+  animation: fadeInScale 320ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+
+.feedbackTable tbody tr {
+  opacity: 0;
+  transform: translateY(6px);
+  animation: fadeInUp 280ms cubic-bezier(.2,.8,.2,1) forwards;
+}
+.feedbackTable tbody tr:nth-child(1) { animation-delay: 40ms; }
+.feedbackTable tbody tr:nth-child(2) { animation-delay: 80ms; }
+.feedbackTable tbody tr:nth-child(3) { animation-delay: 120ms; }
+.feedbackTable tbody tr:nth-child(4) { animation-delay: 160ms; }
+.feedbackTable tbody tr:nth-child(5) { animation-delay: 200ms; }
+
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .adminContainer,
+  .feedbackTable tbody tr {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+html[data-theme='dark'] .feedbackTable th,
+html[data-theme='dark'] .feedbackTable td {
+  border-right: 1px solid rgba(255, 255, 255, 0.135);
+}
+
+
+@media (max-width: 720px) {
+  .feedbackTable th,
+  .feedbackTable td {
+    border-right: none;
+  }
+
+  .feedbackTable tbody tr + tr td {
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+}
+
+/* Modal Styles */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease;
+}
+
+.modalBox {
+    background-color: var(--simba-white);
+    border-radius: var(--radius-soft);
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: var(--shadow-medium);
+    animation: slideUp 0.3s ease;
+}
+
+.modalBox h3 {
+    color: var(--simba-orange-dark);
+    margin-bottom: 1rem;
+    font-size: 1.5em;
+}
+
+.modalBox p {
+    color: var(--simba-text-medium);
+    margin-bottom: 1rem;
+}
+
+.replyTextarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--simba-light-grey);
+    border-radius: var(--radius-soft);
+    font-family: var(--font-primary);
+    font-size: 0.95em;
+    resize: vertical;
+    margin-bottom: 1rem;
+    background-color: var(--simba-off-white);
+    color: var(--simba-text-dark);
+}
+
+.replyTextarea:focus {
+    border-color: var(--simba-orange-light);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(224, 145, 74, 0.2);
+}
+
+.modalButtons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.confirmBtn {
+    background-color: var(--simba-orange-dark);
+    color: var(--simba-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radius-round);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.confirmBtn:hover {
+    background-color: var(--simba-orange-light);
+}
+
+.cancelBtn {
+    background-color: var(--simba-light-grey);
+    color: var(--simba-text-medium);
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radius-round);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cancelBtn:hover {
+    background-color: var(--simba-white);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

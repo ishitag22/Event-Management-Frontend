@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --font-primary: 'Poppins', sans-serif;
+  --simba-brown-dark: #6C4234;
+  --simba-orange-dark: #C27040;
+  --simba-orange-light: #E0914A;
+  --simba-white: #FFFFFF;
+  --simba-off-white: #F8F9FA;
+  --simba-light-grey: #DEE2E6;
+  --simba-text-dark: #212529;
+  --simba-text-medium: #495057;
+
+  --shadow-medium: 0 6px 15px rgba(0, 0, 0, 0.12);
+  --radius-soft: 8px;
+}
+
+/* Container */
+.create-category-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: var(--simba-off-white);
+  border-radius: var(--radius-soft);
+  box-shadow: var(--shadow-medium);
+  text-align: center;
+  font-family: var(--font-primary);
+}
+
+/* Heading */
+.create-category-container h2 {
+  color: var(--simba-orange-dark);
+  font-size: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.create-category-container h2 svg {
+  margin-right: 8px;
+  color: var(--simba-orange-light);
+}
+
+/* Form */
+.create-category-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.create-category-form input {
+  padding: 10px;
+  border: 1px solid var(--simba-light-grey);
+  border-radius: var(--radius-soft);
+  font-size: 16px;
+  background-color: var(--simba-white);
+  color: var(--simba-text-dark);
+}
+
+.create-category-form input:focus {
+  outline: none;
+  border-color: var(--simba-orange-light);
+  box-shadow: 0 0 4px var(--simba-orange-light);
+}
+
+/* Button */
+.create-category-form button {
+  padding: 10px;
+  background-color: var(--simba-orange-dark);
+  color: var(--simba-white);
+  border: none;
+  border-radius: var(--radius-soft);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.create-category-form button:hover {
+  background-color: var(--simba-orange-light);
+  transform: scale(1.05);
+}
+
+/* Message */
+.message {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--simba-orange-dark);
+  font-weight: 500;
+}

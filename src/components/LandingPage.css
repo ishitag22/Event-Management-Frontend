@@ -1,0 +1,174 @@
+.landing-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Carousel Background with Blur */
+.landing-bg {
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px) brightness(0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: background-image 1s ease-in-out;
+}
+
+/* Overlay Content */
+.landing-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* ✅ Dark overlay for better contrast */
+}
+
+/* Welcome Text */
+.welcome-text {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0); /* ✅ Text shadow for clarity */
+  background: linear-gradient(90deg, #ff8c1a, var(--simba-orange-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* ✅ Gradient text effect */
+  animation: glow 3s infinite alternate;
+  /* ✅ Glow animation */
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ff8c1a, 0 0 20px #ff8c1a;
+  }
+  to {
+    text-shadow: 0 0 20px var(--simba-orange-dark), 0 0 40px var(--simba-orange-dark);
+  }
+}
+
+.sub-text {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: #f8f8f8;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Options Container */
+.options-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.option-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 16px;
+  width: 300px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.option-card:hover {
+  transform: translateY(-8px);
+}
+
+.option-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.option-card p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.landing-btn {
+  background: linear-gradient(135deg, var(--simba-orange-dark), #ff8c1a);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.landing-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(204, 102, 0, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+.landing-content {
+  padding: 1.75rem;
+}
+.welcome-text {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+}
+.sub-text {
+  font-size: 1.2rem;
+}
+.option-card {
+  width: 260px;
+  padding: 1.6rem;
+}
+}
+
+@media (max-width: 900px) {
+.landing-content {
+  padding: 1.25rem;
+  align-items: center;
+}
+
+/* stack option cards vertically on narrower screens */
+.options-container {
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.option-card {
+  width: calc(100% - 3rem);
+  max-width: 520px;
+  padding: 1.25rem;
+}
+
+.welcome-text {
+  font-size: clamp(1.9rem, 6vw, 2.8rem);
+  line-height: 1.2;
+}
+
+.sub-text {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.landing-btn {
+  padding: 0.7rem 1.2rem;
+  font-size: 0.9rem;
+}
+}

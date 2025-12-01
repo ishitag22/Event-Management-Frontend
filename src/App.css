@@ -1,0 +1,136 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+:root {
+  --font-primary: 'Poppins', sans-serif;
+  --simba-brown-dark: #6C4234;
+  --simba-orange-dark: #C27040;
+  --simba-orange-light: #E0914A;
+  --simba-white: #FFFFFF;
+  --simba-off-white: #F8F9FA;
+  --simba-light-grey: #DEE2E6;
+  --simba-text-dark: #212529;
+  --simba-text-medium: #7d7d7d;
+  --simba-hover-light: #F1F3F5;
+
+  --simba-bg-light: #FFFBF5; 
+  --simba-bg-gradient: linear-gradient(50deg, #FFFBF5 0%, #FFFFFF 95%);
+
+  --shadow-medium: 0 6px 15px rgba(0, 0, 0, 0.12);
+  --radius-soft: 8px;
+  --radius-round: 25px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  background-color: var(--simba-off-white); 
+  color: var(--simba-text-dark);
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+h1, h2, h3 {
+  color: var(--simba-brown-dark);
+  font-weight: 600;
+}
+
+
+.logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* ---  Dark Mode Palette --- */
+:root[data-theme='dark'] {
+  --simba-white: #121212;         
+  --simba-off-white: #202020;      
+  --simba-light-grey: #474747;    
+  --simba-text-dark: #383434;       
+  --simba-text-medium: #7e7777;    
+  --simba-brown-dark: #a07968;      
+  --simba-orange-dark: #be5e0a;     
+  --simba-orange-light: #c17634;    
+  --simba-bg-light: #0b0b0b;
+  --simba-bg-gradient: linear-gradient(50deg, #080808 0%, #121212 95%);
+  --simba-brown-medium: rgba(255,255,255,0.06);
+  --simba-hover-light: rgba(255, 255, 255, 0.1);
+ 
+  --shadow-medium: 0 6px 20px rgba(0, 0, 0, 0.65);
+  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.55);
+
+  --radius-soft: 8px;
+  --radius-round: 25px;
+}
+
+
+
+body {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main-content {
+  flex-grow: 1; /* Pushes footer down */
+}
+
+/* main navigation bar */
+.main-nav {
+  padding: 10px;
+  background-color: #f0f0f0; 
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.main-nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--simba-text-medium);
+  padding: 8px; 
+  border-bottom: 2px solid transparent; 
+  transition: all 0.2s ease-in-out;
+}
+.main-nav a:hover {
+  color: var(--simba-orange-dark);
+}
+.main-nav a.active {
+  color: var(--simba-orange-dark);
+  font-weight: 600;
+  border-bottom-color: var(--simba-orange-dark); 
+}
+
+html[data-theme='dark'] .main-nav {
+  background-color: var(--simba-brown-dark); 
+  border-bottom-color: var(--simba-light-grey);
+}
+html[data-theme='dark'] .main-nav a {
+  color: var(--simba-off-white);
+}
+html[data-theme='dark'] .main-nav a:hover {
+  color: rgb(97, 94, 94);
+}
+html[data-theme='dark'] .main-nav a.active {
+  color: var(--simba-white);
+  border-bottom-color: var(--simba-orange-dark);
+}

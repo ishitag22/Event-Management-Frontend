@@ -1,0 +1,111 @@
+.page-content {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background: 
+  linear-gradient(
+      to bottom right,
+          var(--simba-off-white) 0%,
+          #FFF8F6 40%,
+          var(--simba-orange-light) 80%,
+          var(--simba-orange-dark) 100%);           
+  
+  min-height: 100vh;
+}
+
+.page-content h1 {
+  font-size: 2rem;
+  color: var(--simba-brown-dark);
+  margin-bottom: 0.5rem;
+}
+
+.page-content h2 {
+  font-size: 1.5rem;
+  color: var(--simba-orange-dark);
+  margin-bottom: 1rem;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--simba-orange-dark);
+  color: var(--simba-white);
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: var(--simba-radius-soft);
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: var(--simba-orange-light);
+}
+
+.event-page-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.event-page-layout img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: var(--simba-radius-soft);
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Event Details Card */
+.event-details-card {
+  padding: 1rem;
+  border-radius: var(--simba-radius-soft);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Description Card */
+.event-description-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: var(--simba-radius-soft);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  font-size: 0.95rem;
+  color: var(--simba-text-medium);
+}
+
+/* Book Tickets Panel */
+.page-card {
+  background-color: var(--simba-off-white);
+  padding: 1.5rem;
+  border-radius: var(--simba-radius-soft);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 90px;
+}
+
+.page-card button {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--simba-orange-dark);
+  color: var(--simba-white);
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: var(--simba-radius-soft);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.page-card button:hover {
+  background-color: var(--simba-orange-light);
+}

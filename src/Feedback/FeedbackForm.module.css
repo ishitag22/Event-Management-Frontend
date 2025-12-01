@@ -1,0 +1,199 @@
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 1rem auto;
+  padding: 25px 35px;
+  background-color: var(--simba-white);
+  border-radius: var(--radius-soft);
+  box-shadow: var(--shadow-medium);
+  color: var(--simba-text-dark);
+  text-align: left;
+  background: var(--simba-bg-gradient);
+  border: 1px solid var(--simba-white);
+  will-change: opacity, transform;
+  animation: fadeInUp 300ms cubic-bezier(.2,.8,.2,1) both;
+  animation-delay: 40ms;
+}
+
+.container h2 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  will-change: opacity, transform;
+  animation: fadeInUp 320ms cubic-bezier(.2,.8,.2,1) both;
+  animation-delay: 60ms;
+}
+
+.inputGroup label,
+.grid label {
+  font-weight: 500;
+  color: var(--simba-text-medium);
+  font-size: 0.95em;
+  flex-basis: 100px;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.inputField,
+.textarea {
+  padding: 12px 15px;
+  font-size: 1em;
+  font-family: var(--font-primary);
+  border: 1px solid var(--simba-light-grey);
+  border-radius: var(--radius-soft);
+  background-color: var(--simba-off-white);
+  transition: background-color 200ms ease, border-color 200ms ease, box-shadow 200ms ease, color 200ms ease, transform 160ms ease;
+}
+
+/* Subtle hover lift for inputs and textarea */
+.inputField:hover,
+.textarea:hover {
+  border-color: var(--simba-hover-light);
+  transform: translateY(-1px);
+}
+
+/* Focus remains explicit */
+.inputField:focus,
+.textarea:focus {
+  border-color: var(--simba-orange-light);
+  box-shadow: 0 0 0 3px rgba(224, 145, 74, 0.2);
+  outline: none;
+  background-color: var(--simba-white);
+}
+
+
+
+.textarea {
+  min-height: 50px;
+  resize: vertical;
+}
+
+.heading, .headingevent{
+  font-weight: 600;
+  font-size: 1.2em;
+  color: var(--simba-brown-dark);
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+  
+}
+
+.heading {
+  border-bottom: 1px solid var(--simba-light-grey);
+}
+.starRating {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.ratingGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.ratingGridRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0;
+  will-change: opacity, transform;
+  animation: fadeInUp 320ms cubic-bezier(.2,.8,.2,1) both;
+  animation-delay: 60ms;
+}
+
+/* --- Buttons --- */
+.primaryButton,
+.secondaryButton {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: var(--radius-round);
+  cursor: pointer;
+  transition: background-color 180ms ease, box-shadow 180ms ease, transform 140ms ease, color 180ms ease;
+  border: none;
+  font-size: 1rem;
+  width: 250px;
+  align-self: center;
+}
+
+.primaryButton {
+  background-color: var(--simba-orange-dark);
+  color: var(--simba-white);
+}
+.primaryButton:hover {
+  background-color: var(--simba-orange-light);
+  box-shadow: var(--shadow-light);
+  transform: translateY(-3px);
+}
+
+.secondaryButton {
+  background-color: var(--simba-off-white);
+  color: var(--simba-text-medium);
+  border: 1px solid var(--simba-light-grey);
+}
+.secondaryButton:hover {
+  background-color: var(--simba-white);
+  border-color: #ccc;
+  transform: translateY(-2px);
+}
+
+html[data-theme='dark'] .inputField:focus,
+html[data-theme='dark'] .textarea:focus {
+  border-color: var(--simba-orange-light) !important;
+  box-shadow: 0 0 0 3px rgba(189,166,156,0.16) !important;
+  outline: none;
+  background-color: var(--simba-brown-dark) !important;
+  color: var(--simba-text-dark) !important;
+  caret-color: var(--simba-text-dark) !important;
+}
+:global(body[data-theme='dark']) .inputField::placeholder,
+:global(body[data-theme='dark']) .textarea::placeholder {
+  color: var(--simba-text-medium) !important;
+}
+html[data-theme='dark'] .option {
+  color: var(--simba-off-white) ;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 1100px; 
+  }
+
+  .ratingGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 60px;
+  }
+}
+
+/* --- entrance animation--- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html[data-theme='dark'] .inputField {
+  color: var(--simba-text-medium) ;
+  background-color: var(--simba-off-white);
+}
+
+
+

@@ -1,0 +1,88 @@
+.event-card {
+  background: linear-gradient(135deg, var(--simba-white) 0%, var(--simba-off-white) 100%);
+  border-radius: 16px; /* Softer rounded corners */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  position: relative;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.event-image {
+  width: 100%;
+  height: 180px; /* Slightly taller for better visuals */
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.event-datetime {
+  padding: 6px 14px 0 14px;
+  font-size: 0.75rem;
+  color: var(--simba-text-medium);
+  font-weight: 400;
+}
+
+.event-name {
+  padding: 0px 14px 0 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--simba-brown-dark);
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+.event-location {
+  padding: 0 14px 2px 14px;
+  font-size: 0.85rem;
+  color: var(--simba-text-medium);
+  font-weight: 400;
+}
+
+.event-price {
+  padding: 0 14px 10px 14px;
+  font-size: 0.9rem;
+  color: var(--simba-orange-dark);
+  font-weight: 600;
+}
+
+/* Optional hover overlay for a premium feel */
+.event-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 153, 51, 0.08);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.event-card:hover::after {
+  opacity: 1;
+}
+
+.event-card.expired {
+  background-color: #f0f0f0;
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.expired-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #d9534f;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}

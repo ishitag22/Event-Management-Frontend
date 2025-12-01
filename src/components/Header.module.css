@@ -1,0 +1,219 @@
+
+@import '../App.css';
+ 
+.header {
+  width: 100%;
+  background: linear-gradient(135deg, #6C4234 0%, #8B5A3C 50%, #6C4234 100%);
+  border-bottom: 1px solid var(--simba-brown-dark); 
+  box-shadow: var(--shadow-light);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+
+.headerContent {
+  max-width: 80rem; 
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem; 
+}
+ 
+/* --- Left: Logo & Title --- */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; 
+  text-decoration: none;
+  transition: opacity 0.2s ease; 
+}
+.logoContainer:hover {
+  opacity: 0.8;
+}
+.logo {
+  width: 60px ;
+  height: 60px;
+}
+ 
+.logoText {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 1.25rem; 
+  color: var(--simba-off-white); 
+  padding-bottom: 2px;
+}
+ 
+/* --- Right: Profile & Logout --- */
+.profileContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+ 
+.profileIcon {
+  width: 2.5rem;
+  height: 2.5rem; 
+  border-radius: 9999px; /* full circle */
+  background-color: var(--simba-off-white);
+  border: 1px solid var(--simba-light-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+ 
+.profileIcon svg {
+  width: 1.5rem; 
+  height: 1.5rem; 
+  color: var(--simba-text-medium);
+}
+
+/* --- Logout Button --- */
+.logoutButton {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 0.9em;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-round);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  
+  background-color: var(--simba-orange-dark);
+  color: var(--simba-white);
+  border: 1px solid var(--simba-orange-dark);
+}
+ 
+.logoutButton:hover {
+  background-color: var(--simba-orange-light);
+  border-color: var(--simba-orange-light);
+  box-shadow: var(--shadow-light);
+}
+
+/* --- Login Button --- */
+.loginButton {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 0.9em;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-round);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  
+  background-color: var(--simba-orange-dark);
+  color: var(--simba-white);
+  border: 1px solid var(--simba-orange-dark);
+}
+ 
+.loginButton:hover {
+  background-color: var(--simba-orange-light);
+  border-color: var(--simba-orange-light);
+  box-shadow: var(--shadow-light);
+}
+
+.rightContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; 
+}
+
+/* --- Notification Bell --- */
+.notificationBell {
+  background-color: var(--simba-off-white);
+  border: 1px solid var(--simba-light-grey);
+  color: var(--simba-text-dark);
+  font-size: 1.1rem; 
+  width: 2.5rem; 
+  height: 2.5rem; 
+  border-radius: 50%; 
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  cursor: pointer;
+}
+.notificationBell:hover {
+  background-color: var(--simba-light-grey);
+  border-color: #ccc;
+}
+
+/* DARK MODE  --- */
+
+html[data-theme='dark'] .notificationBell {
+  background-color: var(--simba-light-grey);
+  border-color: var(--simba-light-grey);
+}
+html[data-theme='dark'] .notificationBell:hover {
+  background-color: var(--simba-text-dark);
+}
+ 
+html[data-theme='dark'] .header {
+  background: linear-gradient(135deg, var(--simba-white) 0%, var(--simba-light-grey) 50%, var(--simba-white) 100%);
+  border-bottom: 1px solid var(--simba-white); 
+}
+
+
+html[data-theme='dark'] .logoText {
+  color: rgb(218, 218, 189);
+}
+ 
+html[data-theme='dark'] .profileIcon {
+  background-color: var(--simba-light-grey);
+  border: 1px solid var(--simba-brown-medium);
+}
+ 
+html[data-theme='dark'] .profileIcon:hover{
+  background-color: var(--simba-text-dark);
+}
+ 
+html[data-theme='dark'] .themeToggle {
+  background-color: var(--simba-light-grey);
+  color: var(--simba-white);
+}
+ 
+html[data-theme='dark'] .themeToggle:hover {
+  background-color: var(--simba-text-dark);
+  color: var(--simba-white);
+}
+/* NEW: Style for the theme toggle button */
+.themeToggle,
+.notificationBell,
+.profileIcon {
+  width: 2.5rem; /* 40px */
+  height: 2.5rem; /* 40px */
+  border-radius: 50%; /* Circle */
+  /* 3. Make buttons blend with dark header */
+  background-color: #984e31; /* Lighter brown */
+  border: 1px solid var(--simba-brown-medium);
+  color: var(--simba-white); /* Light icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+ 
+.themeToggle:hover,
+.notificationBell:hover,
+.profileIcon:hover {
+  background-color: var(--simba-orange-light);
+  border-color: var(--simba-off-white);
+  color: var(--simba-white);
+}
+ 
+.themeToggle {
+  font-size: 1.25rem; /* Emoji size */
+}
+.notificationBell {
+  font-size: 1.1rem; /* Bell icon size */
+}
+ 
+.profileIcon svg {
+  width: 1.5rem; /* 24px */
+  height: 1.5rem; /* 24px */
+  color: var(--simba-white); /* Light icon */
+}

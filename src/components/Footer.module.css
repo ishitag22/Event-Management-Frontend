@@ -1,0 +1,118 @@
+.footer {
+  width: 100%;
+  background: linear-gradient(135deg, #6C4234 0%, #8B5A3C 50%, #6C4234 100%);
+  color: var(--simba-white);
+  margin-top: auto; 
+  padding: 2rem 1rem 1rem 1rem;
+  box-sizing: border-box; 
+}
+
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ 
+/* --- Top Section Layout --- */
+.footerTop {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+ 
+/* Logo */
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footerLogo img {
+  width: 60px;
+  height: 60px;
+}
+.footerLogo span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--simba-white);
+}
+ 
+/* Links */
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 1.5rem;
+  flex-grow: 1; 
+}
+.footerLinks a {
+  color: var(--simba-light-grey);
+  text-decoration: none;
+  font-weight: 500;
+}
+.footerLinks a:hover {
+  color: var(--simba-orange-light);
+}
+ 
+/* --- Bottom Section Layout --- */
+.footerBottom {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem; /* Increased gap */
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--simba-brown-medium);
+}
+ 
+ 
+.legalText {
+  font-size: 0.8em;
+  color: var(--simba-light-grey);
+  margin: 0;
+  flex: 1;
+  min-width: 300px; 
+}
+ 
+.socialIcons {
+  display: flex;
+  gap: 1.5rem; /* Increased gap */
+}
+.socialIcons a {
+  color: var(--simba-white);
+  text-decoration: none;
+  font-size: 1.3rem; /* Made icons slightly larger */
+  transition: color 0.2s ease; /* Added transition */
+}
+.socialIcons a:hover {
+  color: var(--simba-orange-light);
+}
+ 
+/* --- DARK MODE STYLES --- */
+html[data-theme='dark'] .legalText {
+  color: var(--simba-off-white);
+}
+ 
+html[data-theme='dark'] .footerLinks a {
+  color: var(--simba-off-white);
+}
+html[data-theme='dark'] .footerLinks a:hover {
+  color: var(--simba-light-grey);
+}
+ 
+body[data-theme='dark'] .footerBottom {
+  border-top-color: var(--simba-light-grey);
+}
+body[data-theme='dark'] .legalText {
+  color: var(--simba-text-medium);
+}
+ 
+html[data-theme='dark'] .socialIcons a:hover {
+  color: var(--simba-light-grey);
+}
+
+html[data-theme='dark'] .footer {
+  background: linear-gradient(135deg, #b08164 0%, #977865 50%, #b08164 100%);
+}

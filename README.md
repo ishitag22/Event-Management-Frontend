@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# 🌟 Event Management System – Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 Overview
+The frontend of the Event Management System is built with **React.js** and provides an interactive user interface for exploring events, booking tickets, managing profiles, and viewing booking history. It ensures a smooth, responsive, and user-friendly experience.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
+- Browse events with artist, venue, time & details  
+- Real-time ticket availability  
+- Smooth booking flow with dynamic pricing  
+- Integrated payment flow UI  
+- Downloadable & shareable tickets  
+- User profile with booking history  
+- Admin dashboard UI for event and feedback management  
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tech Stack
+- **React.js**
+- **HTML, CSS, JavaScript**
+- **Axios**  
+- **React Router**
+- **CSS Modules**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧩 Setup & Run Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/Ishitag22/Event-Management-Frontend.git
+```
+### 2️⃣ Navigate to project folder
+```bash
+cd Event-Management-Frontend
+```
+### 3️⃣ Install dependencies
+```bash
+npm install
+```
+### 4️⃣ Run the development server
+```bash
+npm start
+```
+### 5️⃣ Open in browser
+```arduino
+http://localhost:3000
+```
+👥 Contributors
 
-### `npm run build`
+Ishita Gaur – Ticket Booking, Event Details, Booking Flow
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Swathi Kancharla – Event Management Dashboard
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Mousoomi Shit – Feedback & Replies Module
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Akhila Sivayogi – Login & Registration
 
-### `npm run eject`
+BhavyaSree Umitti – Payment Integration, Notifications, History
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**This project is developed as part of a collaborative learning initiative. Contributions and improvements are welcome!**
